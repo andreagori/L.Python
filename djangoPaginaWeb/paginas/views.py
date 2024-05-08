@@ -1,10 +1,11 @@
- from generic_queue import Queue
- queue = Queue[int]()
+from django.shortcuts import render
+from django.views.generic import TemplateView  # Import TemplateView
 
- queue.push(3)
- queue.push(12)
- queue.elements
-deque([3, 12])
 
- queue.pop()
-3
+# Create your views here.
+class PaginasConfig(TemplateView):
+    template_name = "paginaInicio.html"  # you put the name of your html.
+
+
+class PaginasAcercaConfig(TemplateView):
+    template_name = "paginas/about.html"  # you put the name of your html.
